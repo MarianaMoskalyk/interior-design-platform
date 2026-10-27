@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import EditorPage from "./pages/EditorPage";
+import AdminPage from "./pages/AdminPage";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/editor/:projectId?" element={<EditorPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </HashRouter>
   );
